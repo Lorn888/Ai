@@ -1,4 +1,7 @@
 import React from 'react'
+import { Form } from 'react-router-dom'
+import { preview } from '../assets'
+import Loader from './Loader'
 
 const FormField = ({ labelName, type, name, placeHolder, value, handleChange, isSurpriseMe, handleSurpriseMe}) => {
   return (
@@ -28,6 +31,8 @@ const FormField = ({ labelName, type, name, placeHolder, value, handleChange, is
         required
         className='bg-grey-50 border border-gray-300 text-grey-900 text-sm rounded-lg focus:ring-[#4649ff] focus:border-[#4649ff outline-none block w-full p-3'
        />
+
+       
     </div>
   )
 }
