@@ -16,6 +16,37 @@ const Home = () => {
   const [allPosts, setAllPosts] = useState(null)
   const [searchText, setSearchText] = useState('')
 
+  useEffect(() => {
+    const fetchPost = async () => {
+      setLoading(true);
+    
+      try {
+        const response = await fetch('http://192.168.0.229:8085/api/v1/post', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+
+          },
+        })
+
+        if(response.ok) {
+          const result = await response.json();
+        }
+      } catch (error) {
+
+        finally{
+          setLoading(false)
+        }
+      }
+    }
+      
+
+    return () => {
+      second
+    }
+  }, [third])
+  
+
   return (
     <section className='max-w-7x1 mx-auto'>
       <div>
