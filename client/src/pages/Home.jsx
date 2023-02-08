@@ -17,7 +17,7 @@ const Home = () => {
   const [searchText, setSearchText] = useState('')
 
   useEffect(() => {
-    const fetchPost = async () => {
+    const fetchPosts = async () => {
       setLoading(true);
     
       try {
@@ -31,20 +31,18 @@ const Home = () => {
 
         if(response.ok) {
           const result = await response.json();
+
+          setAllPosts(result.data.reverse());
         }
       } catch (error) {
-
-        finally{
+        alert(error)
+      } finally{
           setLoading(false)
         }
       }
-    }
-      
+      fetchPosts();
 
-    return () => {
-      second
-    }
-  }, [third])
+    }, [])
   
 
   return (
@@ -81,7 +79,7 @@ const Home = () => {
                 />
               ) : (
                 <RenderCards
-                  data={[]}
+                  data={allPosts}
                   title="No Posts Yet"
                 />
               )}
