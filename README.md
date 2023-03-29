@@ -67,3 +67,5 @@ We would like to thank the following individuals and organizations for their con
 ## License
 
 This project is licensed under the MIT License.
+
+Feel free to try deployed app at https://ai-frontend.onrender.com/
